@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">expCTA</string>
+    <string name="get_data">get_data</string>
+    <string name="rt">rt</string>
+    <string name="rt_init_text">155</string>
+</resources>

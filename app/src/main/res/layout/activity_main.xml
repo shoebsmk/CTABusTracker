@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    tools:context=".MainActivity">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:onClick="getPredData"
+                    android:text="@string/get_data"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/stopSelTV" />
+
+                <TextView
+                    android:id="@+id/routeSelTV"
+                    android:layout_width="340dp"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="31dp"
+                    android:background="@color/material_dynamic_neutral70"
+                    android:gravity="center"
+                    android:hint="Select Bus Route"
+                    android:onClick="onRouteSelClick"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/directionSelTV"
+                    android:layout_width="340dp"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="16dp"
+                    android:background="@color/material_dynamic_neutral70"
+                    android:gravity="center"
+                    android:hint="Select Bus Direction"
+                    android:onClick="onDirectionSelClick"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.549"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/routeSelTV" />
+
+                <TextView
+                    android:id="@+id/stopSelTV"
+                    android:layout_width="340dp"
+                    android:layout_height="39dp"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/material_dynamic_neutral70"
+                    android:gravity="center"
+                    android:hint="Select Bus Stop"
+                    android:onClick="onStopSelClick"
+                    android:textAlignment="center"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.549"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/directionSelTV" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/myRV"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:layout_marginTop="16dp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/button" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
+
+
+
+
